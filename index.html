@@ -21,6 +21,15 @@ body{margin:0;background:#0A100C;font-family:Inter,system-ui,sans-serif;-webkit-
 @keyframes esFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 ::selection{background:#00B761;color:#0A100C}
 a{-webkit-tap-highlight-color:transparent}
+html,body{overflow-x:hidden}
+@media(max-width:700px){
+  .navlink{display:none!important}
+}
+@media(max-width:640px){
+  .tvscreen{aspect-ratio:auto!important}
+  .posterrow{display:grid!important;grid-template-columns:repeat(3,1fr);gap:10px!important}
+}
+
 .hvbase{transition:all .25s}
 .hv0:hover{opacity:1;color:#00B761}
 .hv1:hover{filter:brightness(1.1);transform:translateY(-1px) scale(1.04);box-shadow:0 8px 22px rgba(0,183,97,.3)}
@@ -52,9 +61,9 @@ a{-webkit-tap-highlight-color:transparent}
     </a>
     <div style="flex:1"></div>
     <div style="display:flex;align-items:center;gap:22px;font-size:13.5px;font-weight:500">
-      <a href="#tarifs" style="color:#F2F8F3;text-decoration:none;opacity:.85" class="hv0">Tarifs</a>
-      <a href="#avantages" style="color:#F2F8F3;text-decoration:none;opacity:.85" class="hv0">Avantages</a>
-      <a href="#faq" style="color:#F2F8F3;text-decoration:none;opacity:.85" class="hv0">FAQ</a>
+      <a href="#tarifs" style="color:#F2F8F3;text-decoration:none;opacity:.85" class="navlink hv0">Tarifs</a>
+      <a href="#avantages" style="color:#F2F8F3;text-decoration:none;opacity:.85" class="navlink hv0">Avantages</a>
+      <a href="#faq" style="color:#F2F8F3;text-decoration:none;opacity:.85" class="navlink hv0">FAQ</a>
       <a href="https://wa.me/447407265573?text=Bonjour%20%21%20Je%20souhaite%20m%27abonner%20%C3%A0%20ELITE%20SCREEN." target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#57E39B,#00B761 60%,#008349);color:#0A100C;font-family:Poppins,sans-serif;font-weight:700;font-size:13px;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap" class="hv1">Je m'abonne</a>
     </div>
   </div>
@@ -89,15 +98,15 @@ a{-webkit-tap-highlight-color:transparent}
   <!-- écran TV stylisé -->
   <div data-reveal="" style="position:relative;max-width:760px;margin:56px auto 0;animation:esFloat 6s ease-in-out infinite">
     <div style="border:2px solid rgba(242,248,243,.16);border-radius:18px;padding:10px;background:linear-gradient(160deg,#131C16,#0A100C);box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(0,183,97,.05)">
-      <div style="border-radius:10px;overflow:hidden;background:#0C130F;aspect-ratio:16/7.5;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;gap:12px;position:relative">
+      <div class="tvscreen" style="border-radius:10px;overflow:hidden;background:#0C130F;aspect-ratio:16/7.5;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;gap:12px;position:relative">
         <div style="position:absolute;inset:0;background:radial-gradient(120% 100% at 20% 0%,rgba(0,98,51,.35),transparent 55%),radial-gradient(120% 100% at 85% 10%,rgba(210,16,52,.28),transparent 50%),radial-gradient(100% 120% at 55% 100%,rgba(0,183,97,.2),transparent 60%)"></div>
         <div style="position:relative;font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(16px,3vw,26px);color:#F2F8F3;text-align:left">À la une ce soir</div>
-        <div style="position:relative;display:flex;gap:10px">
-          <img src="https://upload.wikimedia.org/wikipedia/en/3/37/Michael_%282026_film_poster%29.png" alt="Michael (2026)" title="Michael (2026)" loading="lazy" style="flex:1;aspect-ratio:2/3;max-height:110px;min-width:0;width:100%;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
-          <img src="https://upload.wikimedia.org/wikipedia/en/9/90/The_Odyssey_%282026_film%29_poster.jpg" alt="The Odyssey (2026)" title="The Odyssey (2026)" loading="lazy" style="flex:1;aspect-ratio:2/3;max-height:110px;min-width:0;width:100%;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
-          <img src="https://upload.wikimedia.org/wikipedia/en/0/08/Toy_Story_5_poster.jpg" alt="Toy Story 5 (2026)" title="Toy Story 5 (2026)" loading="lazy" style="flex:1;aspect-ratio:2/3;max-height:110px;min-width:0;width:100%;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
-          <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Stranger_Things_season_5.jpeg" alt="Stranger Things 5" title="Stranger Things 5" loading="lazy" style="flex:1;aspect-ratio:2/3;max-height:110px;min-width:0;width:100%;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
-          <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/The_Night_Agent.png" alt="The Night Agent S3 (2026)" title="The Night Agent S3 (2026)" loading="lazy" style="flex:1;aspect-ratio:2/3;max-height:110px;min-width:0;width:100%;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
+        <div class="posterrow" style="position:relative;display:flex;gap:12px">
+          <img src="https://upload.wikimedia.org/wikipedia/en/3/37/Michael_%282026_film_poster%29.png" alt="Michael (2026)" title="Michael (2026)" loading="lazy" class="poster" style="flex:1;aspect-ratio:2/3;min-width:0;width:100%;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
+          <img src="https://upload.wikimedia.org/wikipedia/en/9/90/The_Odyssey_%282026_film%29_poster.jpg" alt="The Odyssey (2026)" title="The Odyssey (2026)" loading="lazy" class="poster" style="flex:1;aspect-ratio:2/3;min-width:0;width:100%;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/08/Toy_Story_5_poster.jpg" alt="Toy Story 5 (2026)" title="Toy Story 5 (2026)" loading="lazy" class="poster" style="flex:1;aspect-ratio:2/3;min-width:0;width:100%;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
+          <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Stranger_Things_season_5.jpeg" alt="Stranger Things 5" title="Stranger Things 5" loading="lazy" class="poster" style="flex:1;aspect-ratio:2/3;min-width:0;width:100%;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/The_Night_Agent.png" alt="The Night Agent S3 (2026)" title="The Night Agent S3 (2026)" loading="lazy" class="poster" style="flex:1;aspect-ratio:2/3;min-width:0;width:100%;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,.12);box-shadow:0 5px 16px rgba(0,0,0,.45)">
         </div>
       </div>
     </div>
